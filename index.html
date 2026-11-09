@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anthony Chassagne</title>
+<meta name="description" content="Anthony Chassagne. MS&E at Stanford, research in ML for genomics and financial markets. Projects, research, contact.">
+<style>
+  :root {
+    --bg: #fcfcfa;
+    --fg: #1a1a1a;
+    --muted: #6b6b66;
+    --line: #e4e4df;
+    --accent: #1f4e79;
+    --tag: #eef2f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121212; --fg: #ececea; --muted: #9a9a94; --line: #2a2a2a; --accent: #8ab4e8; --tag: #1e2630;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 56px 16px 80px; }
+  h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); margin: 0 0 16px; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin: 48px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+  p { margin: 0 0 12px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 18px; font-size: 15px; }
+  .item { padding: 18px 0; border-bottom: 1px solid var(--line); }
+  .item:last-child { border-bottom: none; }
+  .item h3 { font-size: 17px; margin: 0 0 2px; }
+  .meta { color: var(--muted); font-size: 14px; margin-bottom: 8px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .tag { font-size: 12px; padding: 2px 8px; border-radius: 999px; background: var(--tag); color: var(--muted); }
+  ul { padding-left: 18px; margin: 8px 0 0; }
+  li { margin: 2px 0; }
+  .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; }
+  @media (max-width: 520px) { .skills { grid-template-columns: 1fr; } }
+  .skills div { font-size: 15px; }
+  .skills b { display: block; font-size: 13px; color: var(--muted); font-weight: 600; margin-bottom: 2px; }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>Anthony Chassagne</h1>
+  <p class="sub">MS&amp;E (Data, AI &amp; Decision) at Stanford · École Polytechnique (X23) · from La Réunion</p>
+  <p>I build ML systems where the data is messy and the stakes are real: gene-regulatory networks, crypto liquidation cascades, and tools used in live field operations. Current focus: graph neural networks, autonomous research agents, and interpretability.</p>
+  <div class="links">
+    <a href="https://github.com/anthony-chassagne">GitHub</a>
+    <a href="https://x.com/tonychassagne">X</a>
+    <a href="https://www.linkedin.com/in/anthony-chassagne-27a22a248/">LinkedIn</a>
+    <a href="mailto:ach974@stanford.edu">Email</a>
+  </div>
+
+  <h2>Projects</h2>
+
+  <div class="item">
+    <h3>Real-time helicopter-camera-to-map tool for airborne operations</h3>
+    <div class="meta">R&amp;D for a French counter-terrorism unit · Dec 2024 to Apr 2025 · in production, used by dozens of operators</div>
+    <p>Python tool that projects the ground area filmed by a helicopter camera onto a live digital map on a smartphone, so ground units can track a vehicle without radio guidance. Reverse-engineered the camera data stream from sparse documentation and mapped it to geographic coordinates, before coding assistants existed.</p>
+    <div class="tags"><span class="tag">Python</span><span class="tag">geospatial</span><span class="tag">real-time</span><span class="tag">deployed</span></div>
+  </div>
+
+  <div class="item">
+    <h3>Predicting liquidation cascades on Hyperliquid</h3>
+    <div class="meta">Research with Prof. Ruizhe Jia, Stanford · 2026</div>
+    <p>Built a catalogue of 726 liquidation-cascade events across 84 perpetual-futures markets from ~1.8B raw fills, and showed that common cascade definitions barely agree with each other. Order-book features predict next-24h cascades with ROC-AUC above 0.9 within a market. Data engineering on a multi-TB on-chain dataset on the Stanford SC cluster.</p>
+    <div class="tags"><span class="tag">PyTorch Geometric</span><span class="tag">GNN</span><span class="tag">Slurm</span><span class="tag">large-scale data</span></div>
+  </div>
+
+  <h2>Research</h2>
+
+  <div class="item">
+    <h3>Engreitz Lab, Stanford Genetics / Biomedical Informatics</h3>
+    <div class="meta">Research Assistant · Oct 2026 to present</div>
+    <ul>
+      <li>Agentic autoresearch to find new regulatory pathways: an LLM workflow that reads the lab's experimental data, recovers regulatory pathways, and proposes the next experiments to refine them.</li>
+      <li>Protein language models (ESM) to improve identification of gene programs from Perturb-seq data.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <h3>Autonomous alpha-tuning research agent, with Prof. Ruizhe Jia</h3>
+    <div class="meta">MS&amp;E research project · Fall 2026</div>
+    <p>Starting from an anonymized feature set provided by a quantitative fund: reproduce the linear baseline, improve it with non-linear models, then turn the loop into an autoresearch agent that proposes, tests and tunes alpha models on its own.</p>
+  </div>
+
+  <div class="item">
+    <h3>Dynamic graph anomaly detection, LIX (École Polytechnique)</h3>
+    <div class="meta">Research project · supervised by Yanlei Diao and Guillaume Lachaud · Sep 2025 to Apr 2026</div>
+    <p>Anomaly detection on graphs whose structure evolves over time, applied to financial fraud detection: improving both the performance and the explainability of graph deep learning models, and exploring their use for high-frequency trading.</p>
+    <div class="tags"><span class="tag">GNN</span><span class="tag">temporal graphs</span><span class="tag">explainability</span><span class="tag">PyTorch</span></div>
+  </div>
+
+  <div class="item">
+    <h3>Crop-yield forecasting from climate data, CMAP (École Polytechnique)</h3>
+    <div class="meta">Research project · Sep 2024 to Apr 2025</div>
+    <p>Modeled agricultural yield variability across Canadian regions from temperature, precipitation and sunlight features. Benchmarked the full model ladder (linear, tree ensembles such as XGBoost, neural networks) and focused on the interpretability of OLS coefficients to extract which climate variables actually drive yield.</p>
+    <div class="tags"><span class="tag">time series</span><span class="tag">forecasting</span><span class="tag">interpretability</span></div>
+  </div>
+
+  <div class="item">
+    <h3>Influencer vs. observer classification from tweets</h3>
+    <div class="meta">Deep Learning course, Kaggle-style competition · Nov to Dec 2025</div>
+    <p>Supervised pipeline on tweets and user metadata with fine-tuned BERT models; regularization, class-imbalance handling and hyperparameter tuning. Accuracy 0.855, top 10% of the cohort.</p>
+    <div class="tags"><span class="tag">transformers</span><span class="tag">NLP</span><span class="tag">BERT</span></div>
+  </div>
+
+  <h2>Skills</h2>
+  <div class="skills">
+    <div><b>ML</b>GNNs, transformers, interpretability, PyTorch / PyTorch Geometric, TensorFlow / Keras</div>
+    <div><b>Agents</b>Autonomous research agents, Claude Code, tool use, multi-agent orchestration</div>
+    <div><b>Data</b>Python, pandas/polars, parquet at scale, Slurm clusters</div>
+    <div><b>Product</b>TypeScript, Postgres, Prisma, Java</div>
+    <div><b>Domains</b>Genomics (Perturb-seq, gene programs), crypto market microstructure, quant finance</div>
+    <div><b>Languages</b>French (native), English (TOEFL 113), Spanish (working knowledge)</div>
+  </div>
+
+  <h2>Background</h2>
+  <div class="item">
+    <p><b>Stanford</b>: MS in Management Science &amp; Engineering, Data/AI/Decision track (2026 to present). Admitted to MIT, Berkeley and Columbia; Carnot and Monahan Foundation scholar.</p>
+    <p><b>École Polytechnique</b>: X23, AI &amp; Data Science track, CGPA 4.03/4.00. Chair of the Polytechnique music festival (team of 20, €200k budget, 3,500 attendees); chair of X-HEC Duo Conseil (60-member consulting society, missions sold to French SMEs). "Outstanding Leadership" award.</p>
+    <p><b>Roland Berger</b>: strategy consulting intern (summer 2025). Strategic mission on the competitiveness of the European automotive industry; commercial due diligence and strategic plan in energy.</p>
+    <p>Judo black belt and team captain (15 years, competition), boxing, piano (7 years). Long-term interest: AI for biology and aging.</p>
+  </div>
+
+</main>
+</body>
+</html>
